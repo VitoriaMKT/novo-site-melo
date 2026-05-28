@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Consórcio Premium | Simulador</title>
+    <title>Melo Capital | Simulador</title>
     <link rel="stylesheet" href="estilo.css" />
     <script src="script.js" defer></script>
   </head>
@@ -11,7 +11,7 @@
     <header class="site-header">
        <div class="container header-inner">
         <a href="index.html" class="brand">
-          <img src="logo.png" alt="Logo Consórcio Premium" class="brand-logo" />
+          <img src="logo.png" alt="Logo Melo Capital" class="brand-logo" />
          Melo Capital
         </a>
         <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menu">Menu</button>
@@ -26,24 +26,16 @@
     </header>
 
     <main>
-      <section class="hero hero-page">
-        <div class="container">
-          <div class="page-heading">
-            <span class="eyebrow">Simulação Prévia</span>
-            <h1>Simulação com valores aproximados, sujeita a ajustes.</h1>
-            <p>
-              Esta é uma simulação para fins estimativos. Os resultados apresentados são aproximados, podem sofrer alterações e não constituem proposta vinculante.
-            </p>
-          </div>
-        </div>
-      </section>
-<section class="section section-secondary">
+      <!-- Estatísticas removidas daqui e realocadas na página de Serviços -->
+
+      <section class="section section-secondary">
         <div class="container simulator-grid">
           <div class="simulator-copy">
-            <h2>Os valores apresentados são estimativos e estão sujeitos a análise e possíveis alterações.</h2>
+            <h2>Descubra agora o potencial do seu crédito!</h2>
             <p>
-             Ajuste o valor do bem, o prazo e a entrada para visualizar a estimativa da parcela e do crédito disponível.
+              Os valores são uma prévia e podem melhorar após análise. Ajuste o valor, escolha o prazo ideal e simule sua parcela na hora. Faça sua simulação e veja o crédito que pode estar ao seu alcance!
             </p>
+            <p class="simulator-cta"><a class="btn btn-primary" href="#simulador-form">Simular agora</a></p>
           </div>
       
           <div class="simulator-card">
@@ -63,8 +55,9 @@
               </label>
               <label>
                 Entrada (% do valor)
-                <input id="entrada" type="range" min="0" max="40" value="10" />
-                <span class="range-value"><span id="entradaValor">10</span>%</span>
+                <div style="display:flex;align-items:center;gap:0.6rem;">
+                  <input id="entrada" type="number" min="0" max="100" step="1" value="10" style="width:100px;" />
+                </div>
               </label>
               <button type="submit" class="btn btn-primary">Calcular</button>
             </form>

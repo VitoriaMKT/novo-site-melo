@@ -31,12 +31,11 @@ function initSimulator() {
   const valorBem = document.getElementById('valorBem');
   const prazo = document.getElementById('prazo');
   const entrada = document.getElementById('entrada');
-  const entradaValor = document.getElementById('entradaValor');
   const parcela = document.getElementById('parcela');
   const resultadoEntrada = document.getElementById('resultadoEntrada');
   const creditoDisponivel = document.getElementById('creditoDisponivel');
 
-  if (!form || !valorBem || !prazo || !entrada || !entradaValor || !parcela || !resultadoEntrada || !creditoDisponivel) {
+  if (!form || !valorBem || !prazo || !entrada || !parcela || !resultadoEntrada || !creditoDisponivel) {
     return;
   }
 
@@ -56,14 +55,14 @@ function initSimulator() {
   }
 
   function resetResultados() {
-    entradaValor.textContent = entrada.value;
     parcela.textContent = 'R$ 0,00';
     resultadoEntrada.textContent = 'R$ 0,00';
     creditoDisponivel.textContent = 'R$ 0,00';
   }
 
+  // keep calculation updated while typing
   entrada.addEventListener('input', () => {
-    entradaValor.textContent = entrada.value;
+    // no displayed percent element; simply keep results cleared until submit
   });
 
   form.addEventListener('submit', (event) => {
